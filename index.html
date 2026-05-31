@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fineframe | Builders & Promotors</title>
+    <title>FineFrame | Builders & Promotors</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -79,32 +77,6 @@
             border: 1px solid rgba(255, 255, 255, 0.45);
         }
 
-        .lang-toggle {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            margin-left: 14px;
-        }
-
-        .lang-btn {
-            border: 1px solid rgba(255, 255, 255, 0.45);
-            background: rgba(255, 255, 255, 0.08);
-            color: #fff;
-            font-size: 0.78rem;
-            font-weight: 600;
-            border-radius: 999px;
-            padding: 5px 10px;
-            line-height: 1;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .lang-btn.active,
-        .lang-btn:hover {
-            background: rgba(255, 255, 255, 0.26);
-            border-color: rgba(255, 255, 255, 0.75);
-        }
-
         .hero {
             height: 100vh;
             background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
@@ -149,11 +121,6 @@
             min-height: 34px;
             letter-spacing: 0.25px;
             margin-bottom: 10px;
-        }
-
-        html[lang="ta"] .hero-subline {
-            font-family: 'Noto Sans Tamil', 'Poppins', sans-serif;
-            letter-spacing: 0;
         }
 
         .hero-letter {
@@ -311,20 +278,20 @@
             font-family: 'Playfair Display', serif;
             font-weight: 700;
             letter-spacing: 0.35px;
-            white-space: nowrap;
-            line-height: 1.15;
+            white-space: normal;
+            line-height: 1.25;
             text-transform: capitalize;
         }
 
         .service-icon {
-            width: 40px;
-            height: 40px;
+            width: 46px;
+            height: 46px;
+            flex-shrink: 0;
             border-radius: 10px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 10px;
-            font-size: 18px;
+            font-size: 20px;
             color: #fff;
             background: linear-gradient(145deg, #183963 0%, #24548c 100%);
         }
@@ -332,8 +299,8 @@
         .service-head {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
+            gap: 14px;
+            margin-bottom: 16px;
             flex-wrap: nowrap;
         }
 
@@ -373,7 +340,7 @@
 
         .project-card img {
             width: 100%;
-            border-radius: 8px;
+            border-radius: 0;
             aspect-ratio: 4 / 3;
             height: auto;
             object-fit: cover;
@@ -383,19 +350,10 @@
         .project-card {
             background: #fff;
             border-radius: 10px;
-            padding: 8px;
+            padding: 0;
             box-shadow: 0 10px 24px rgba(11, 31, 58, 0.12);
             transition: transform 0.25s ease, box-shadow 0.25s ease;
             overflow: hidden;
-        }
-
-        .project-card h4 {
-            color: var(--primary);
-            padding: 12px 6px 8px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            line-height: 1.35;
-            margin: 0;
         }
 
         .box:hover,
@@ -673,8 +631,8 @@
         .footer-menu a::before {
             content: ">";
             font-size: 0.78rem;
-            opacity: 0;
-            transform: translateX(-6px);
+            opacity: 1;
+            transform: translateX(0);
             transition: transform 0.25s ease, opacity 0.25s ease;
         }
 
@@ -720,6 +678,17 @@
             word-break: break-word;
         }
 
+        .footer-contact-value a {
+            color: #d9e6f9;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-contact-value a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
         .footer-bottom {
             margin-top: 20px;
             padding-top: 16px;
@@ -761,10 +730,6 @@
                 padding: 42px 28px;
             }
 
-            .lang-toggle {
-                margin: 8px 0 0 0;
-            }
-
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 18px;
@@ -774,6 +739,10 @@
         @media(max-width:420px) {
             .projects-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
             }
 
             .service-card h3 {
@@ -799,7 +768,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top fancy-nav">
         <div class="container">
-            <a class="navbar-brand nav-brand" href="#">Fineframe</a>
+            <a class="navbar-brand nav-brand" href="#">FineFrame</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
                 aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -812,10 +781,6 @@
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link nav-contact" href="#contact">Contact</a></li>
                 </ul>
-                <div class="lang-toggle">
-                    <button type="button" class="lang-btn active" data-lang="en">English</button>
-                    <button type="button" class="lang-btn" data-lang="ta">தமிழ்</button>
-                </div>
             </div>
         </div>
     </nav>
@@ -831,8 +796,14 @@
     <section id="about">
         <h2 class="section-title">About Us</h2>
         <div class="about-content">
-            <p>Fineframe Builders & Promotors is a construction and real estate company based in Coimbatore, started in January 2024 with a clear vision to turn individual property dreams into reality with quality, transparency, and trust. We specialize in helping clients identify the right land in prime locations across Coimbatore and transforming it into thoughtfully designed, structurally strong, and budget-friendly homes.</p>
-            <p>At Fineframe, we believe building a home is more than a project - it is a lifelong investment filled with emotions, security, and pride. From initial consultation to final handover, we provide end-to-end project management with strict quality control at every stage.</p>
+            <p>FineFrame Builders & Promotors is a construction and real estate company based in Coimbatore, started in
+                January 2024 with a clear vision to turn individual property dreams into reality with quality,
+                transparency, and trust. We specialize in helping clients identify the right land in prime locations
+                across Coimbatore and transforming it into thoughtfully designed, structurally strong, and
+                budget-friendly homes.</p>
+            <p>At FineFrame, we believe building a home is more than a project - it is a lifelong investment filled with
+                emotions, security, and pride. From initial consultation to final handover, we provide end-to-end
+                project management with strict quality control at every stage.</p>
 
             <div class="mission-vision">
                 <div class="box">
@@ -877,10 +848,10 @@
                     <h3>Architectural Planning</h3>
                 </div>
                 <ul>
-                    <li>Vastu Plan</li>
-                    <li>2D Architectural Planning</li>
-                    <li>Plumbing Drawing Design</li>
-                    <li>Electrical Drawing Design</li>
+                    <li>2D Floor plan</li>
+                    <li>Approval Drawings</li>
+                    <li>Plumbing Layout Design</li>
+                    <li>Electrical Layout Design</li>
                 </ul>
             </div>
 
@@ -892,8 +863,7 @@
                 <ul>
                     <li>3D Interior Design</li>
                     <li>3D Exterior Design</li>
-                    <li>Furniture Layout</li>
-                    <li>Room Design</li>
+                    <li>3D Cut View Design</li>
                 </ul>
             </div>
 
@@ -905,6 +875,7 @@
                 <ul>
                     <li>Home Loan Assistance</li>
                     <li>Legal Documentation Support</li>
+                    <li>Building plan approvals and DTCP Regularisation</li>
                 </ul>
             </div>
         </div>
@@ -921,20 +892,10 @@
                 <li><i class="bi bi-box-seam"></i><span>High-quality materials and workmanship</span></li>
                 <li><i class="bi bi-cash-coin"></i><span>Transparent costing with no hidden charges</span></li>
                 <li><i class="bi bi-hourglass-split"></i><span>Timely project completion</span></li>
-                <li><i class="bi bi-house-heart"></i><span>Personalized home designs based on your lifestyle</span></li>
+                <li><i class="bi bi-building-gear"></i><span>Post-Handover Service Help</span></li>
                 <li><i class="bi bi-file-earmark-check"></i><span>Legal and documentation support</span></li>
                 <li><i class="bi bi-camera-video"></i><span>Continuous site monitoring and updates</span></li>
             </ul>
-            <div class="utility-grid">
-                <div class="utility-item"><i class="bi bi-cone-striped"></i><span>Site Safety Supervision</span></div>
-                <div class="utility-item"><i class="bi bi-truck"></i><span>Material Logistics Support</span></div>
-                <div class="utility-item"><i class="bi bi-tools"></i><span>Utility Fittings Coordination</span></div>
-                <div class="utility-item"><i class="bi bi-lightning-charge"></i><span>Electrical & Plumbing Setup</span>
-                </div>
-                <div class="utility-item"><i class="bi bi-shield-check"></i><span>Quality Assurance Checks</span></div>
-                <div class="utility-item"><i class="bi bi-building-gear"></i><span>Post-Handover Service Help</span>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -943,27 +904,21 @@
         <div class="projects-grid">
             <div class="project-card">
                 <img src="assets/images/1.jpeg" alt="Project 1">
-                <h4>Project 1 - Fineframe</h4>
             </div>
             <div class="project-card">
                 <img src="assets/images/2.jpeg" alt="Project 2">
-                <h4>Project 2 - Fineframe</h4>
             </div>
             <div class="project-card">
                 <img src="assets/images/3.jpeg" alt="Project 3">
-                <h4>Project 3 - Fineframe</h4>
             </div>
             <div class="project-card">
                 <img src="assets/images/4.jpeg" alt="Project 4">
-                <h4>Project 4 - Fineframe</h4>
             </div>
             <div class="project-card">
                 <img src="assets/images/5.jpeg" alt="Project 5">
-                <h4>Project 5 - Fineframe</h4>
             </div>
             <div class="project-card">
                 <img src="assets/images/6.jpeg" alt="Project 6">
-                <h4>Project 6 - Fineframe</h4>
             </div>
         </div>
     </section>
@@ -989,8 +944,8 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
-                <h3>Fineframe Builders &amp; Promotors</h3>
-                <p id="footerTagline">Building spaces with quality, trust, and long-term value.</p>
+                <h3>FineFrame Builders &amp; Promotors</h3>
+                <p id="footerTagline">Framing your dream homes into reality with high&#8209;quality</p>
             </div>
             <div>
                 <h4 class="footer-title" id="footerMenuTitle">Quick Menu</h4>
@@ -1008,25 +963,25 @@
                     <li class="footer-contact-item">
                         <i class="bi bi-telephone-fill"></i>
                         <span class="footer-contact-text">
-                            <span class="footer-contact-value">+91 8428427776</span>
+                            <span class="footer-contact-value">Rajkumar | <a href="tel:+918428427776">+91 8428427776</a></span>
                         </span>
                     </li>
                     <li class="footer-contact-item">
                         <i class="bi bi-envelope-fill"></i>
                         <span class="footer-contact-text">
-                            <span class="footer-contact-value">fineframebuilders@gmail.com</span>
+                            <span class="footer-contact-value"><a href="mailto:fineframebuilders@gmail.com">fineframebuilders@gmail.com</a></span>
                         </span>
                     </li>
                     <li class="footer-contact-item">
                         <i class="bi bi-geo-alt-fill"></i>
                         <span class="footer-contact-text">
-                            <span class="footer-contact-value" id="footerAddressText">Perur Chettipalayam, Coimbatore - 641010</span>
+                            <span class="footer-contact-value" id="footerAddressText"><a href="https://www.google.com/maps/search/?api=1&query=Perur+Chettipalayam+Coimbatore+641010" target="_blank" rel="noopener noreferrer">Perur Chettipalayam, Coimbatore - 641010</a></span>
                         </span>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom" id="footerBottomText">© 2026 Fineframe | Coimbatore | All Rights Reserved</div>
+        <div class="footer-bottom" id="footerBottomText">© 2026 FineFrame | Coimbatore | All Rights Reserved</div>
     </footer>
 
     <a href="https://wa.me/918428427776" class="whatsapp" target="_blank" rel="noopener noreferrer"
@@ -1049,7 +1004,7 @@
         const toast = document.getElementById("toast");
         const mainNav = document.getElementById("mainNav");
         const menuLinks = document.querySelectorAll("#mainNav .nav-link");
-        const langButtons = document.querySelectorAll(".lang-btn");
+
         const heroSubline = document.getElementById("heroSubline");
         let heroSublineTimer = null;
 
@@ -1063,13 +1018,13 @@
                 footer_menu_title: "Quick Menu",
                 footer_contact_title: "Get In Touch",
                 footer_address_text: "Perur Chettipalayam, Coimbatore - 641010",
-                footer_tagline: "Building spaces with quality, trust, and long-term value.",
+                footer_tagline: "Framing your dream homes into reality with high‑quality",
                 hero_title: "Turning Property Dreams into Reality",
                 hero_subline: "Homes  |  Offices  |  Commercial Spaces",
                 enquire_now: "Enquire Now",
                 about_title: "About Us",
-                about_p1: "Fineframe Builders & Promotors is a construction and real estate company based in Coimbatore, started in January 2024 with a clear vision to turn individual property dreams into reality with quality, transparency, and trust. We specialize in helping clients identify the right land in prime locations across Coimbatore and transforming it into thoughtfully designed, structurally strong, and budget-friendly homes.",
-                about_p2: "At Fineframe, we believe building a home is more than a project - it is a lifelong investment filled with emotions, security, and pride. From initial consultation to final handover, we provide end-to-end project management with strict quality control at every stage.",
+                about_p1: "FineFrame Builders & Promotors is a construction and real estate company based in Coimbatore, started in January 2024 with a clear vision to turn individual property dreams into reality with quality, transparency, and trust. We specialize in helping clients identify the right land in prime locations across Coimbatore and transforming it into thoughtfully designed, structurally strong, and budget-friendly homes.",
+                about_p2: "At FineFrame, we believe building a home is more than a project - it is a lifelong investment filled with emotions, security, and pride. From initial consultation to final handover, we provide end-to-end project management with strict quality control at every stage.",
                 mission_title: "Our Mission",
                 mission_desc: "To deliver high-quality homes that combine innovation, strength, and design excellence while maintaining honesty and complete customer satisfaction.",
                 vision_title: "Our Vision",
@@ -1083,16 +1038,16 @@
                 s1_l2: "Premium Construction Plan",
                 s1_l3: "Luxury Construction Plan",
                 s1_l4: "Services start from one cent",
-                s2_l1: "Vastu Plan",
-                s2_l2: "2D Architectural Planning",
-                s2_l3: "Plumbing Drawing Design",
-                s2_l4: "Electrical Drawing Design",
+                s2_l1: "2D Floor plan",
+                s2_l2: "Approval Drawings",
+                s2_l3: "Plumbing Layout Design",
+                s2_l4: "Electrical Layout Design",
                 s3_l1: "3D Interior Design",
                 s3_l2: "3D Exterior Design",
-                s3_l3: "Furniture Layout",
-                s3_l4: "Room Design",
+                s3_l3: "3D Cut View Design",
                 s4_l1: "Home Loan Assistance",
                 s4_l2: "Legal Documentation Support",
+                s4_l3: "Building plan approvals and DTCP Regularisation",
                 focus_title: "Our Team Focuses On",
                 focus_1: "Land identification assistance in prime locations across Coimbatore",
                 focus_2: "Strategic planning and expert structural design",
@@ -1100,22 +1055,10 @@
                 focus_4: "High-quality materials and workmanship",
                 focus_5: "Transparent costing with no hidden charges",
                 focus_6: "Timely project completion",
-                focus_7: "Personalized home designs based on your lifestyle",
+                focus_7: "Post-Handover Service Help",
                 focus_8: "Legal and documentation support",
                 focus_9: "Continuous site monitoring and updates",
-                util_1: "Site Safety Supervision",
-                util_2: "Material Logistics Support",
-                util_3: "Utility Fittings Coordination",
-                util_4: "Electrical & Plumbing Setup",
-                util_5: "Quality Assurance Checks",
-                util_6: "Post-Handover Service Help",
                 projects_title: "Projects",
-                p1_title: "Project 1 - Fineframe",
-                p2_title: "Project 2 - Fineframe",
-                p3_title: "Project 3 - Fineframe",
-                p4_title: "Project 4 - Fineframe",
-                p5_title: "Project 5 - Fineframe",
-                p6_title: "Project 6 - Fineframe",
                 contact_title: "Contact Us",
                 ph_name: "Your Name",
                 ph_phone: "Phone Number",
@@ -1123,103 +1066,22 @@
                 ph_message: "How can we help you?",
                 submit: "Submit",
                 submitting: "Submitting...",
-                footer_bottom: "© 2026 Fineframe | Coimbatore | All Rights Reserved",
+                footer_bottom: "© 2026 FineFrame | Coimbatore | All Rights Reserved",
                 msg_add_url: "Add your Google Apps Script Web App URL first.",
                 msg_success: "Details submitted successfully.",
                 msg_failed: "Submission failed. Please try again."
-            },
-            ta: {
-                nav_home: "முகப்பு",
-                nav_about: "எங்களை பற்றி",
-                nav_services: "சேவைகள்",
-                nav_projects: "திட்டங்கள்",
-                nav_contact: "தொடர்பு",
-                footer_menu_title: "விரைவு மெனு",
-                footer_contact_title: "எங்களை தொடர்புகொள்ள",
-                footer_address_text: "பேரூர் செட்டிபாளையம், கோயம்புத்தூர் - 641010",
-                footer_tagline: "தரம், நம்பிக்கை மற்றும் நீண்டகால மதிப்புடன் இடங்களை உருவாக்குகிறோம்.",
-                hero_title: "உங்கள் சொத்து கனவுகளை நனவாக்குகிறோம்",
-                hero_subline: "வீடுகள்  |  அலுவலகங்கள்  |  வணிக இடங்கள்",
-                enquire_now: "இப்போது தொடர்பு கொள்ளுங்கள்",
-                about_title: "எங்களை பற்றி",
-                about_p1: "ஃபைன்ஃப்ரேம் பில்டர்ஸ் & புரொமோட்டர்ஸ் கோயம்புத்தூரை மையமாகக் கொண்டு செயல்படும் கட்டுமான மற்றும் ரியல் எஸ்டேட் நிறுவனம். ஜனவரி 2024 முதல் தரம், வெளிப்படைத்தன்மை மற்றும் நம்பிக்கையுடன் உங்கள் சொத்து கனவுகளை நனவாக்கும் நோக்கில் செயல்படுகிறது. கோயம்புத்தூரின் முக்கிய இடங்களில் சரியான நிலத்தை தேர்வு செய்ய உதவி செய்து, அதை தரமான, வலுவான, செலவு குறைந்த வீடுகளாக மாற்றுவதில் நாங்கள் நிபுணர்கள்.",
-                about_p2: "வீடு கட்டுவது ஒரு திட்டம் மட்டுமல்ல; அது உணர்வு, பாதுகாப்பு மற்றும் பெருமையை தரும் நீண்டகால முதலீடு என்று நாங்கள் நம்புகிறோம். ஆரம்ப ஆலோசனையிலிருந்து இறுதி ஒப்படைப்பு வரை, தரக் கட்டுப்பாட்டுடன் முழுமையான திட்ட மேலாண்மையை வழங்குகிறோம்.",
-                mission_title: "எங்கள் நோக்கம்",
-                mission_desc: "நேர்மை மற்றும் முழுமையான வாடிக்கையாளர் திருப்தியுடன், புதுமை, வலிமை, அழகு ஆகியவற்றை இணைக்கும் உயர்தர வீடுகளை வழங்குவது.",
-                vision_title: "எங்கள் பார்வை",
-                vision_desc: "தரம் மற்றும் சேவையில் புதிய தரநிலைகளை அமைத்து, கோயம்புத்தூரில் மிகவும் நம்பகமான கட்டுமான நிறுவனங்களில் ஒன்றாக வளருவது.",
-                services_title: "எங்கள் சேவைகள்",
-                s1_title: "கட்டுமான சேவைகள்",
-                s2_title: "கட்டிட வடிவமைப்பு திட்டம்",
-                s3_title: "டிசைன் காண்பாக்கம்",
-                s4_title: "கடன் ஏற்பாடுகள்",
-                s1_l1: "ஸ்டாண்டர்ட் கட்டுமான திட்டம்",
-                s1_l2: "பிரீமியம் கட்டுமான திட்டம்",
-                s1_l3: "லக்ஷுரி கட்டுமான திட்டம்",
-                s1_l4: "ஒரு சென்ட் முதல் சேவை தொடக்கம்",
-                s2_l1: "வாஸ்து திட்டம்",
-                s2_l2: "2D கட்டிட வரைபடம்",
-                s2_l3: "பிளம்பிங் வரைபட வடிவமைப்பு",
-                s2_l4: "மின்சாரம் வரைபட வடிவமைப்பு",
-                s3_l1: "3D உள்துறை வடிவமைப்பு",
-                s3_l2: "3D வெளித்துறை வடிவமைப்பு",
-                s3_l3: "மரச்சாமான் அமைப்பு திட்டம்",
-                s3_l4: "அறை வடிவமைப்பு",
-                s4_l1: "வீட்டு கடன் உதவி",
-                s4_l2: "சட்ட ஆவண உதவி",
-                focus_title: "எங்கள் குழுவின் முக்கிய கவனம்",
-                focus_1: "கோயம்புத்தூரின் முக்கிய இடங்களில் நிலத் தேர்வு உதவி",
-                focus_2: "திட்டமிட்ட கட்டமைப்பு & நிபுணர் வடிவமைப்பு",
-                focus_3: "வாடிக்கையாளர் கருத்துக்கு ஏற்ப தனிப்பயன் வடிவமைப்பு",
-                focus_4: "உயர்தர பொருட்கள் மற்றும் வேலைத்திறன்",
-                focus_5: "மறைமுக செலவில்லா வெளிப்படையான மதிப்பீடு",
-                focus_6: "நேரத்திற்குள் திட்ட நிறைவு",
-                focus_7: "உங்கள் வாழ்க்கை முறைக்கு ஏற்ற வீட்டு வடிவமைப்பு",
-                focus_8: "சட்ட மற்றும் ஆவண உதவி",
-                focus_9: "தொடர்ச்சியான தள கண்காணிப்பு மற்றும் அப்டேட்கள்",
-                util_1: "தள பாதுகாப்பு மேற்பார்வை",
-                util_2: "கட்டுமான பொருள் லாஜிஸ்டிக்ஸ் ஆதரவு",
-                util_3: "பயன்பாட்டு பொருத்துதல் ஒருங்கிணைப்பு",
-                util_4: "மின்சாரம் & பிளம்பிங் அமைப்பு",
-                util_5: "தரத் தணிக்கை பரிசோதனைகள்",
-                util_6: "ஒப்படைப்பு பிந்தைய சேவை உதவி",
-                projects_title: "திட்டங்கள்",
-                p1_title: "திட்டம் 1 - ஃபைன்ஃப்ரேம்",
-                p2_title: "திட்டம் 2 - ஃபைன்ஃப்ரேம்",
-                p3_title: "திட்டம் 3 - ஃபைன்ஃப்ரேம்",
-                p4_title: "திட்டம் 4 - ஃபைன்ஃப்ரேம்",
-                p5_title: "திட்டம் 5 - ஃபைன்ஃப்ரேம்",
-                p6_title: "திட்டம் 6 - ஃபைன்ஃப்ரேம்",
-                contact_title: "தொடர்பு கொள்ளுங்கள்",
-                ph_name: "உங்கள் பெயர்",
-                ph_phone: "தொலைபேசி எண்",
-                ph_email: "மின்னஞ்சல் முகவரி",
-                ph_message: "எப்படி உதவலாம்?",
-                submit: "சமர்ப்பிக்கவும்",
-                submitting: "சமர்ப்பிக்கப்படுகிறது...",
-                footer_bottom: "© 2026 ஃபைன்ஃப்ரேம் | கோயம்புத்தூர் | அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை",
-                msg_add_url: "முதலில் உங்கள் Google Apps Script Web App URL ஐ சேர்க்கவும்.",
-                msg_success: "விவரங்கள் வெற்றிகரமாக சமர்ப்பிக்கப்பட்டன.",
-                msg_failed: "சமர்ப்பிப்பு தோல்வி. தயவுசெய்து மீண்டும் முயற்சிக்கவும்."
             }
         };
 
-        let currentLang = localStorage.getItem("site_lang") || "en";
-        if (!i18n[currentLang]) {
-            currentLang = "en";
-        }
-        let HERO_SUBLINE_TEXT = i18n[currentLang].hero_subline;
+        const currentLang = "en";
+        let HERO_SUBLINE_TEXT = i18n.en.hero_subline;
 
         function t(key) {
-            return i18n[currentLang][key] || i18n.en[key] || "";
+            return i18n.en[key] || "";
         }
 
-        function applyLanguage(lang) {
-            currentLang = i18n[lang] ? lang : "en";
-            localStorage.setItem("site_lang", currentLang);
+        function applyLanguage() {
             HERO_SUBLINE_TEXT = t("hero_subline");
-
-            document.documentElement.lang = currentLang === "ta" ? "ta" : "en";
             document.querySelector("#mainNav .nav-link[href='#']").textContent = t("nav_home");
             document.querySelector("#mainNav .nav-link[href='#about']").textContent = t("nav_about");
             document.querySelector("#mainNav .nav-link[href='#services']").textContent = t("nav_services");
@@ -1232,7 +1094,7 @@
             document.getElementById("footerNavContact").textContent = t("nav_contact");
             document.getElementById("footerMenuTitle").textContent = t("footer_menu_title");
             document.getElementById("footerContactTitle").textContent = t("footer_contact_title");
-            document.getElementById("footerAddressText").textContent = t("footer_address_text");
+            document.getElementById("footerAddressText").innerHTML = '<a href="https://www.google.com/maps/search/?api=1&query=Perur+Chettipalayam+Coimbatore+641010" target="_blank" rel="noopener noreferrer">' + t("footer_address_text") + '</a>';
             document.getElementById("footerTagline").textContent = t("footer_tagline");
             document.getElementById("footerBottomText").textContent = t("footer_bottom");
 
@@ -1261,7 +1123,7 @@
             serviceTitles[3].textContent = t("s4_title");
 
             const serviceItems = document.querySelectorAll("#services .service-card li");
-            const serviceKeys = ["s1_l1", "s1_l2", "s1_l3", "s1_l4", "s2_l1", "s2_l2", "s2_l3", "s2_l4", "s3_l1", "s3_l2", "s3_l3", "s3_l4", "s4_l1", "s4_l2"];
+            const serviceKeys = ["s1_l1", "s1_l2", "s1_l3", "s1_l4", "s2_l1", "s2_l2", "s2_l3", "s2_l4", "s3_l1", "s3_l2", "s3_l3", "s4_l1", "s4_l2", "s4_l3"];
             serviceItems.forEach(function (item, idx) {
                 item.textContent = t(serviceKeys[idx]);
             });
@@ -1277,20 +1139,7 @@
                 item.textContent = t(focusKeys[idx]);
             });
 
-            const utilityItems = document.querySelectorAll(".utility-grid .utility-item span");
-            const utilityKeys = ["util_1", "util_2", "util_3", "util_4", "util_5", "util_6"];
-            utilityItems.forEach(function (item, idx) {
-                item.textContent = t(utilityKeys[idx]);
-            });
-
             document.querySelector("#projects .section-title").textContent = t("projects_title");
-            const projectTitles = document.querySelectorAll("#projects .project-card h4");
-            projectTitles[0].textContent = t("p1_title");
-            projectTitles[1].textContent = t("p2_title");
-            projectTitles[2].textContent = t("p3_title");
-            projectTitles[3].textContent = t("p4_title");
-            projectTitles[4].textContent = t("p5_title");
-            projectTitles[5].textContent = t("p6_title");
 
             document.querySelector("#contact .section-title").textContent = t("contact_title");
             document.querySelector("input[name='name']").placeholder = t("ph_name");
@@ -1299,18 +1148,9 @@
             document.querySelector("textarea[name='message']").placeholder = t("ph_message");
             setSubmitting(false);
 
-            langButtons.forEach(function (btn) {
-                btn.classList.toggle("active", btn.dataset.lang === currentLang);
-            });
-
             startHeroSublineAnimation();
         }
 
-        langButtons.forEach(function (btn) {
-            btn.addEventListener("click", function () {
-                applyLanguage(btn.dataset.lang);
-            });
-        });
         const HERO_LETTER_DIRECTIONS = ["dir-up", "dir-down", "dir-left", "dir-right"];
 
         function splitGraphemes(text) {
@@ -1326,22 +1166,37 @@
             let directionIndex = 0;
             let animatedCount = 0;
 
-            splitGraphemes(HERO_SUBLINE_TEXT).forEach(function (char) {
-                const span = document.createElement("span");
-                span.classList.add("hero-letter");
+            // Split preserving whitespace tokens so spaces become &nbsp; spans
+            const parts = HERO_SUBLINE_TEXT.split(/(\s+)/);
 
-                if (char === " ") {
-                    span.classList.add("space");
-                    span.innerHTML = "&nbsp;";
+            parts.forEach(function (part) {
+                if (/^\s+$/.test(part)) {
+                    // Whitespace between words — render as non-breaking space spans
+                    Array.from(part).forEach(function () {
+                        const span = document.createElement("span");
+                        span.classList.add("hero-letter", "space");
+                        span.innerHTML = "&nbsp;";
+                        heroSubline.appendChild(span);
+                    });
                 } else {
-                    span.textContent = char;
-                    span.classList.add(HERO_LETTER_DIRECTIONS[directionIndex % HERO_LETTER_DIRECTIONS.length]);
-                    span.style.animationDelay = (animatedCount * 0.08) + "s";
-                    directionIndex += 1;
-                    animatedCount += 1;
-                }
+                    // Wrap each word in a nowrap container so it never breaks mid-character
+                    const wordWrap = document.createElement("span");
+                    wordWrap.style.whiteSpace = "nowrap";
+                    wordWrap.style.display = "inline-block";
 
-                heroSubline.appendChild(span);
+                    splitGraphemes(part).forEach(function (char) {
+                        const span = document.createElement("span");
+                        span.classList.add("hero-letter");
+                        span.textContent = char;
+                        span.classList.add(HERO_LETTER_DIRECTIONS[directionIndex % HERO_LETTER_DIRECTIONS.length]);
+                        span.style.animationDelay = (animatedCount * 0.08) + "s";
+                        directionIndex += 1;
+                        animatedCount += 1;
+                        wordWrap.appendChild(span);
+                    });
+
+                    heroSubline.appendChild(wordWrap);
+                }
             });
 
             const loopDelay = animatedCount * 80 + 2200;
@@ -1405,7 +1260,7 @@
         }
 
         setupRevealAnimations();
-        applyLanguage(currentLang);
+        applyLanguage();
 
         function showToast(message, type) {
             toast.textContent = message;
